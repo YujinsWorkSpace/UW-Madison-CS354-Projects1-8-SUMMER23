@@ -1,0 +1,15 @@
+// first pointer returned is 8-byte aligned
+#include <assert.h>
+#include <stdlib.h>
+#include <stdint.h>
+#include "p4Heap.h"
+
+int main() {
+    int result = init_heap(4096); // restult=0 means no errors creating heap
+    assert(result==0); // assert means quit program if condition is not true
+
+	// display the list of free and allocated block at the starts	
+	disp_heap();
+
+    exit(0);
+}
